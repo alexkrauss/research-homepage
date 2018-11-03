@@ -1,0 +1,34 @@
+{{ $ := .root }}
+{{ $page := .page }}
+{{ $pubs_len := len (where $.Site.RegularPages "Type" "publication") }}
+
+<!-- Publications widget -->
+<div class="row">
+  <div class="col-xs-12 col-md-12 section-heading">
+    <h1>{{ with $page.Title }}{{ . | markdownify }}{{ end }}</h1>
+    {{ with $page.Params.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
+  </div>
+  <div class="col-xs-12 col-md-12">
+    {{ with $page.Content }}<p>{{ . | markdownify }}</p>{{ end }}
+
+    {{ if and ($page.Params.publication_type) (ne $page.Params.publication_type "-1") }}
+      {{ $.Scratch.Set "recent_pubs" (where (where $.Site.RegularPages "Type" "publication") ".Params.publication_types" "intersect" (slice $page.Params.publication_type)) }}
+    {{ else }}
+      {{ $.Scratch.Set "recent_pubs" (where $.Site.RegularPages "Type" "publication") }}
+    {{ end }}
+
+    {{ range $ptidx, $type := $.Site.Params.publication_types }}
+      <h2>{{ $type }}</h2>
+      <ul>
+      {{ $recent_pubs := $.Scratch.Get "recent_pubs" }}
+      {{ range first $page.Params.count $recent_pubs }}
+        {{ if in .Params.publication_types (string $ptidx) }}
+          {{ partial "publication_li_akr" . }}
+        {{ end }}
+      {{ end }}
+      </ul>
+    {{ end }}
+
+
+  </div>
+</div>

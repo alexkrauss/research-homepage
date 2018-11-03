@@ -1,0 +1,3 @@
+# Hack to have a DOI link: Simply (ab)use the "source" link type.
+- id: btn_source
+  translation: DOI

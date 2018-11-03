@@ -1,7 +1,6 @@
 +++
 # About/Biography widget.
 widget = "about"
-active = true
 date = 2016-04-20T00:00:00
 
 # Order that this section will appear in.
@@ -10,31 +9,18 @@ weight = 5
 # List your academic interests.
 [interests]
   interests = [
-    "Artificial Intelligence",
-    "Computational Linguistics",
-    "Information Retrieval"
+    "Interactive theorem proving",
+    "Formal verification",
+    "Software architecture"
   ]
 
-# List your qualifications (such as academic degrees).
-[[education.courses]]
-  course = "PhD in Artificial Intelligence"
-  institution = "Stanford University"
-  year = 2012
-
-[[education.courses]]
-  course = "MEng in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2009
-
-[[education.courses]]
-  course = "BSc in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2008
- 
 +++
 
-# Biography
+I am a former member of the [Theorem Proving Group](https://www21.in.tum.de), headed by [Tobias Nipkow](https://www21.in.tum.de/~nipkow).
+In my dissertation I developed a defininition mechanism for recursive functions in the theorem prover [Isabelle](https://isabelle.in.tum.de/),
+and methods to prove termination of such functions automatically.
 
-Lena Smith is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I left TUM in August 2011, and now work as a Principal Software Architect at [QAware GmbH](https://www.qaware.de/), designing
+and building complex business software.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate. 
+In April 2019, I will be back at TUM for six months for a research sabbatical, where I plan on working with Isabelle/ZF.
