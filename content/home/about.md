@@ -23,4 +23,5 @@ and methods to prove termination of such functions automatically.
 I left TUM in August 2011, and now work as a Principal Software Architect at [QAware GmbH](https://www.qaware.de/), designing
 and building complex business software.
 
-In April 2019, I will be back at TUM for six months for a research sabbatical, where I plan on working with Isabelle/ZF.
+Currently (April - September 2019), I am spending a research sabbatical at TUM. I am working to develop a soft type system on top
+of a set-theoretic logic.
